@@ -1,1 +1,4 @@
-sceneSetups: []
+sceneSetups:
+- path: Assets/Hiramasa/Scene/main.unity
+  isLoaded: 1
+  isActive: 1

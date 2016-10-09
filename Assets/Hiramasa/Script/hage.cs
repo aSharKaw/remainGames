@@ -6,15 +6,14 @@ using System.Collections;
 public class hage : MonoBehaviour
 {
 
-	void Start ()
+  void Start()
   {
 
-	}
-	
-	void Update ()
+  }
+
+  void Update()
   {
     UnityEngine.Debug.Log("私ははげです。");
-	}
+  }
 
 }
-

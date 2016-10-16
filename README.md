@@ -14,3 +14,14 @@ Unity Latest Version:4.5.1
     <dd>titleBGM.mp3</dd>
     <dd>titleSE.wav</dd>
 </dl>
+**[スクリプト]**
+<dl>
+    <dt>グローバル</dt>
+    <dd>キャメル型</dd>
+    <dt>ローカル</dt>
+    <dd>一文字目小文字+キャメル型</dd>
+    <dt>定数</dt>
+    <dd>全大文字</dd>
+    <dt>他</dt>
+    <dd>Inspectorに投げたいときはPublicではなく[SerializeField]を利用してください</dd>
+</dl>

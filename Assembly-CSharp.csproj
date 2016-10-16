@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Arakawa\Script\resultManager.cs" />
+     <Compile Include="Assets\Hiramasa\Script\touchManager.cs" />
      <Compile Include="Assets\Hiramasa\Script\touchTest.cs" />
      <Compile Include="Assets\Ueno\test_u.cs" />
      <Compile Include="Assets\Wada\Script\test.cs" />

@@ -13,7 +13,7 @@ public class touchTest : MonoBehaviour
 
   void Update()
   {
-
+    Debug.Log(touchManager.GetTouch(0));
   }
 
 }

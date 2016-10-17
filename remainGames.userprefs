@@ -1,6 +1,7 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Hiramasa/Script/touchManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Hiramasa/Script/humanAITest.cs">
     <Files>
+      <File FileName="Assets/Hiramasa/Script/humanAITest.cs" Line="3" Column="1" />
       <File FileName="Assets/Hiramasa/Script/touchManager.cs" Line="8" Column="3" />
       <File FileName="Assets/Hiramasa/Script/touchTest.cs" Line="14" Column="16" />
     </Files>

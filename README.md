@@ -24,4 +24,5 @@ Unity Latest Version:4.5.1
     <dd>全大文字</dd>
     <dt>他</dt>
     <dd>Inspectorに投げたいときはPublicではなく[SerializeField]を利用してください</dd>
+    <dd>hiramasaより：unsafeは使わないでください！</dd>
 </dl>

@@ -29,6 +29,10 @@ Unity Latest Version:4.5.1
 **[hiramasaメモ]**
 <dl>
     <dd>unsafeは使わないでください。</dd>
-    <dd>pushするファイルは各メンバーそれぞれAssetsのみです。(俺だけ+ProjectSettings。)</dd>
+    <dd>どんなものかというとポインターです。C#では使用を推奨してないです。</dd>
+    <dd>pushするファイルは各メンバーそれぞれAssetsのみです。(私だけ+ProjectSettings。)</dd>
     <dd>それ以外をpushしてプルリクを送るとコンフリクトがたまにおきます。</dd>
+    <dd>ファイルの命名規則はModel+Prefab+自動生成された物のみ先頭大文字でOK。</dd>
+    <dd>プラットフォームはiOSのiPadです。</dd>
+    <dd>実機で動かしたら違う挙動になることがよくあります。LINEで連絡していただければiPadminiで実機テストします。</dd>
 </dl>

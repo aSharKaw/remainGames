@@ -28,3 +28,6 @@ sysinfo.txt
 *.apk
 *.unitypackage
 Library/
+
+# Mac Designated
+*.DS_Store

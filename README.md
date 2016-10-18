@@ -1,4 +1,4 @@
-Unity Latest Version:4.5.1  
+Unity Latest Version：5.4.1f1
 命名規則  
 ========
 **[データ]**
@@ -24,5 +24,17 @@ Unity Latest Version:4.5.1
     <dd>全大文字</dd>
     <dt>他</dt>
     <dd>Inspectorに投げたいときはPublicではなく[SerializeField]を利用してください</dd>
-    <dd>hiramasaより：unsafeは使わないでください！</dd>
+</dl>
+**[hiramasaメモ]**
+<dl>
+    <dd>unsafeは使わないでください。</dd>
+    <dd>どんなものかというとポインターです。C#では使用を推奨してないです。</dd>
+    <dd>pushするファイルは各メンバーそれぞれAssetsのみです。(私だけ+ProjectSettings)</dd>
+    <dd>それ以外をpushしてプルリクを送るとコンフリクトがたまにおきます。</dd>
+    <dd>ファイルの命名規則はModel+Prefab+自動生成された物のみ先頭大文字でOK。</dd>
+    <dd>プラットフォームはiOSのiPadです。</dd>
+    <dd>実機で動かしたら違う挙動になることがよくあります。LINEで連絡していただければiPadminiで実機テストします。</dd>
+    <dd>iOSでビルドする際、AppID+認証許可書いうものが必要になります。</dd>
+    <dd>つまり学校でMac+iPadを借りても実機でビルドできません。</dd>
+    <dd>目でを動作を確認したかったら私に連絡してください。渋渋バンタン行きます。(空いてたら)</dd>
 </dl>

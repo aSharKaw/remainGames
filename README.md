@@ -26,3 +26,9 @@ Unity Latest Version:4.5.1
     <dd>Inspectorに投げたいときはPublicではなく[SerializeField]を利用してください</dd>
     <dd>hiramasaより：unsafeは使わないでください！</dd>
 </dl>
+**[hiramasaメモ]**
+<dl>
+    <dd>unsafeは使わないでください。</dd>
+    <dd>pushするファイルは各メンバーそれぞれAssetsのみです。(俺だけ+ProjectSettings。)</dd>
+    <dd>それ以外をpushしてプルリクを送るとコンフリクトがたまにおきます。</dd>
+</dl>

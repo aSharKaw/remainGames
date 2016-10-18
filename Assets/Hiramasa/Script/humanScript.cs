@@ -3,7 +3,7 @@ using UnityEngine;
 using System.Collections;
 
 
-public class humanAITest : MonoBehaviour
+public class humanScript : MonoBehaviour
 {
 
   [SerializeField]

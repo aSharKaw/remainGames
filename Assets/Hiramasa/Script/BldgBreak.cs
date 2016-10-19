@@ -3,7 +3,7 @@ using UnityEngine;
 using System.Collections;
 
 
-public class BldgBreak : MonoBehaviour
+public class bldgBreak : MonoBehaviour
 {
 
   Rigidbody rb;

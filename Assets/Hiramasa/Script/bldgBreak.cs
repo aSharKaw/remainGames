@@ -9,7 +9,7 @@ public class bldgBreak : MonoBehaviour
   Rigidbody rb;
 
   [SerializeField]
-  private bool breakBldgFlag;
+  bool breakBldgFlag;
 
   void Start()
   {
@@ -19,11 +19,15 @@ public class bldgBreak : MonoBehaviour
   void Update()
   {
 
-    if (Input.GetKey(KeyCode.Space) && breakBldgFlag)
+    if (touchManager.touchCount > 0)
     {
-      rb.isKinematic = false;
-    }
+      // タッチ開始
+      if (touchManager.GetTouch(0) == touchManager.TouchInfo.Began)
+      {
+        rb.isKinematic = false;
+      }
 
+    }
   }
 
 }

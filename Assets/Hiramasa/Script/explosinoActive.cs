@@ -3,31 +3,20 @@ using UnityEngine;
 using System.Collections;
 
 
-public class bldgBreak : MonoBehaviour
+public class explosinoActive : MonoBehaviour
 {
-
-  Rigidbody rb;
-
-  [SerializeField]
-  bool breakBldgFlag;
-
-  void Start()
-  {
-    rb = GetComponent<Rigidbody>();
-  }
 
   void Update()
   {
-
     if (touchManager.touchCount > 0)
     {
       // タッチ開始
       if (touchManager.GetTouch(0) == touchManager.TouchInfo.Began)
       {
-        rb.isKinematic = false;
+        // 現在非推奨関数、そのうち直す。
+        this.gameObject.SetActiveRecursively(true);
       }
-
     }
-  }
 
+  }
 }

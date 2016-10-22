@@ -12,6 +12,8 @@ public class humanScript : MonoBehaviour
   private int destPoint = 0;
   private NavMeshAgent agent;
 
+  private bool humanHitFlag = false;
+
   void Start()
   {
     agent = GetComponent<NavMeshAgent>();
@@ -35,10 +37,18 @@ public class humanScript : MonoBehaviour
 
   void Update()
   {
-    if (agent.remainingDistance < 0.5f)
+    // エフェクトと人間が当たったか検索
+    if (UnityStandardAssets.Effects.ExplosionPhysicsForce.collName == "Human")
+    {
+      humanHitFlag = true;
+      this.gameObject.SetActiveRecursively(false);
+    }
+
+    if (agent.remainingDistance < 0.5f && !humanHitFlag)
     {
       GotoNextPoint();
     }
+
   }
 
 }

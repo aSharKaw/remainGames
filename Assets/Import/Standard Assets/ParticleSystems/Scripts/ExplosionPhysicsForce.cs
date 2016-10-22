@@ -9,8 +9,14 @@ namespace UnityStandardAssets.Effects
 {
   public class ExplosionPhysicsForce : MonoBehaviour
   {
+
     public float explosionForce = 4;
 
+    // 球体の内部や触れたすべてのコライダーの配列を取得します
+    Collider[] cols;
+
+    // アクセスするとエフェクトと当たった人間が取れる
+    public static string collName;
 
     private IEnumerator Start()
     {
@@ -21,7 +27,7 @@ namespace UnityStandardAssets.Effects
       float multiplier = GetComponent<ParticleSystemMultiplier>().multiplier;
 
       float r = 10 * multiplier;
-      var cols = Physics.OverlapSphere(transform.position, r);
+      cols = Physics.OverlapSphere(transform.position, r);
       var rigidbodies = new List<Rigidbody>();
 
       foreach (var col in cols)
@@ -36,7 +42,13 @@ namespace UnityStandardAssets.Effects
       {
         rb.AddExplosionForce(explosionForce * multiplier, transform.position, r, 1 * multiplier, ForceMode.Impulse);
       }
-
     }
+
+    void Update()
+    {
+      collName = cols[1].name;
+    }
+
   }
+
 }

@@ -9,14 +9,11 @@ namespace UnityStandardAssets.Effects
 {
   public class ExplosionPhysicsForce : MonoBehaviour
   {
-
+    
     public float explosionForce = 4;
+    private Collider[] cols;
 
-    // 球体の内部や触れたすべてのコライダーの配列を取得します
-    Collider[] cols;
-
-    // アクセスするとエフェクトと当たった人間が取れる
-    public static string collName;
+    private static string hoge;
 
     private IEnumerator Start()
     {
@@ -42,13 +39,18 @@ namespace UnityStandardAssets.Effects
       {
         rb.AddExplosionForce(explosionForce * multiplier, transform.position, r, 1 * multiplier, ForceMode.Impulse);
       }
+
     }
 
     void Update()
     {
-      collName = cols[1].name;
+      hoge = cols[1].name;
+    }
+
+    public static string getHoge
+    {
+      get { return hoge; }
     }
 
   }
-
 }

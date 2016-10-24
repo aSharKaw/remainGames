@@ -6,6 +6,14 @@ using System.Collections;
 public class explosinoActive : MonoBehaviour
 {
 
+  private GameObject explosion;
+
+  void Awake()
+  {
+    explosion = GameObject.Find("Explosion");
+    explosion.SetActive(false);
+  }
+
   void Update()
   {
     if (touchManager.touchCount > 0)
@@ -13,8 +21,8 @@ public class explosinoActive : MonoBehaviour
       // タッチ開始
       if (touchManager.GetTouch(0) == touchManager.TouchInfo.Began)
       {
-        // 現在非推奨関数、そのうち直す。
-        this.gameObject.SetActiveRecursively(true);
+        // 非推奨から直した
+        explosion.SetActive(true);
       }
     }
 

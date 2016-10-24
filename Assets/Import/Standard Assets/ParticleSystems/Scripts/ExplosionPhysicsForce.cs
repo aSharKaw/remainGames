@@ -9,8 +9,11 @@ namespace UnityStandardAssets.Effects
 {
   public class ExplosionPhysicsForce : MonoBehaviour
   {
+    
     public float explosionForce = 4;
+    private Collider[] cols;
 
+    private static string hoge;
 
     private IEnumerator Start()
     {
@@ -21,7 +24,7 @@ namespace UnityStandardAssets.Effects
       float multiplier = GetComponent<ParticleSystemMultiplier>().multiplier;
 
       float r = 10 * multiplier;
-      var cols = Physics.OverlapSphere(transform.position, r);
+      cols = Physics.OverlapSphere(transform.position, r);
       var rigidbodies = new List<Rigidbody>();
 
       foreach (var col in cols)
@@ -38,5 +41,16 @@ namespace UnityStandardAssets.Effects
       }
 
     }
+
+    void Update()
+    {
+      hoge = cols[1].name;
+    }
+
+    public static string getHoge
+    {
+      get { return hoge; }
+    }
+
   }
 }

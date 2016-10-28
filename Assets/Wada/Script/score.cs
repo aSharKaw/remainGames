@@ -5,24 +5,36 @@ using System.Collections.Generic;
 
 public class score : MonoBehaviour
 {
-    public static int getscore;
+    //スコア
+    private static int setScore = 100;
+    private int _score = 0;
+    private int testscore = 0;
 
-  
-    // Use this for initialization
-    void Start()
+    public static int getScore
     {
-        getscore = 0;
-
-                
+        get { return setScore; }
     }
 
-    // Update is called once per frame
+    void Start()
+    {
+    }
+
     void Update()
     {
-        if(Input.GetKeyDown("space"))
+        if (Input.GetKeyDown("space"))
         {
-            this.GetComponent<Text>().text = "+" + test.setscore;
+            //スコア加算
+            testscore += setScore;
         }
+
+        if (_score < testscore)
+        {
+            _score += 1;
+        }
+
+
+        this.GetComponent<Text>().text = "score: " + _score.ToString();
+
 
     }
 }

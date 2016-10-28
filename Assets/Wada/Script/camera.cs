@@ -4,15 +4,13 @@ using System.Collections;
 public class camera : MonoBehaviour
 {
    
-    int x = 50;
+    private int x = 50;
     
-    // Use this for initialization
     void Start()
     {
 
     }
 
-    // Update is called once per frame
     void Update()
     {
        

@@ -9,6 +9,7 @@ public class touchManager : MonoBehaviour
   // タッチ情報
   public enum TouchInfo
   {
+
     //タッチなし
     None = -1,
     // 以下は UnityEngine.TouchPhase の値に対応
@@ -21,7 +22,10 @@ public class touchManager : MonoBehaviour
   //タッチ情報。タッチされていない場合は null
   public static TouchInfo GetTouch(int i)
   {
-    if (Input.GetMouseButton(0) || Input.touchCount == 1)
+
+    var getMouseButton = Input.GetMouseButton(0);
+    var mtouchCount = Input.touchCount;
+    if (getMouseButton || mtouchCount == 1)
     {
       return TouchInfo.Began;
     }

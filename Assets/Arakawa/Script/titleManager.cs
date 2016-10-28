@@ -1,16 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
-//using UnityEngine.SceneManagement;
+using UnityEngine.SceneManagement;
 
 
 public class titleManager : MonoBehaviour {
 
-    //touchManager.TouchInfo Touch = touchManager.GetTouch(0);
-
     [SerializeField]
     private GameObject building;
-    [SerializeField]
-    private GameObject explosion;
 
     private Vector3 buildingPosition;
     private int count;
@@ -18,20 +14,20 @@ public class titleManager : MonoBehaviour {
     private int transitionTime;
     private bool transition;
 
+    Touch touch;
+
     //タップされればいいだけなので、細かい座標を取るのは割愛
 
-
-    // Use this for initialization
     void Start()
     {
         count = 0;
-        //building.transform.eulerAngles = new Vector3(90, 0, 0);
         buildingPosition = new Vector3(Random.Range(-15, 15), -3, Random.Range(-10, 10));
 
         transition = false;
         transitionTime = 30 * 60;
     }
 
+    //シーン遷移
     void Transition(bool _transition)
     {
         int _count = 0;
@@ -39,21 +35,18 @@ public class titleManager : MonoBehaviour {
         while(_transition)
         {
             //チュートリアル確認ウインドウ表示に差し替えること
-            Instantiate(explosion, new Vector3(Random.Range(-5, 5), 0, Random.Range(-5, 5)), Quaternion.Euler(Vector3.zero));
 
             if (_count == transitionTime)
             {
                 _transition = false;
+                //SceneManager.LoadScene("タイトル！！！！");
             }
             else
             { _count++; }
             break;
         }
-
     }
 
-	
-	// Update is called once per frame
 	void Update () {
 
         if(count == 60 * 0.5)
@@ -64,6 +57,7 @@ public class titleManager : MonoBehaviour {
             count = 0;
         }
 
+#if UNITY_EDITOR
         if (Input.GetMouseButtonDown(0))
         {
             Transition(transition);
@@ -73,6 +67,20 @@ public class titleManager : MonoBehaviour {
         {
             count++;
         }
+#elif UNITY_IPHONE
+        if (Input.touchCount > 0)
+        {
+            if (touch.phase == TouchPhase.Began)
+            {
+                Transition(transition);
+                Debug.Log("Title Taped");
+            }
+        }
+        else
+        {
+            count++;
+        }
+#endif
 
-	}
+    }
 }

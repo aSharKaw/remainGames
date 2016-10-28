@@ -14,9 +14,7 @@ public class gameTime : MonoBehaviour
 
     void Start()
     {
-
         limitTime = minite * 60 + second;
-
     }
 
     void Update()
@@ -41,7 +39,7 @@ public class gameTime : MonoBehaviour
                 //時間を表示する
                 if ((int)(second) != oldSecond)
                 {
-                    this.GetComponent<Text>().text = minite.ToString("00") + ":" + ((int)second).ToString("00");
+                    GetComponent<Text>().text = minite.ToString("00") + ":" + ((int)second).ToString("00");
 
                 }
                 oldSecond = ((int)(second));

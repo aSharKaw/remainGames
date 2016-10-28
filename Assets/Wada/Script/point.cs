@@ -23,7 +23,7 @@ public class point : MonoBehaviour
     {
         if (Input.GetKeyDown("space"))
         {
-            this.GetComponent<Text>().text = "+" + score.getScore;
+           GetComponent<Text>().text = "+" + score.getScore;
 
         }
 

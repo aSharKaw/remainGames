@@ -7,7 +7,7 @@ public class score : MonoBehaviour
 {
     //スコア
     private static int setScore = 100;
-    private int _score = 0;
+    private int mScore = 0;
     private int testscore = 0;
 
     public static int getScore
@@ -27,13 +27,13 @@ public class score : MonoBehaviour
             testscore += setScore;
         }
 
-        if (_score < testscore)
+        if (mScore < testscore)
         {
-            _score += 1;
+            mScore += 1;
         }
 
 
-        this.GetComponent<Text>().text = "score: " + _score.ToString();
+        GetComponent<Text>().text = "score: " + mScore.ToString();
 
 
     }

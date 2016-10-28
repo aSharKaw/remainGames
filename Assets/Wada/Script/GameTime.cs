@@ -3,45 +3,40 @@ using System.Collections;
 using UnityEngine.UI;
 using System.Collections.Generic;
 
-public class GameTime : MonoBehaviour
+public class gameTime : MonoBehaviour
 {
-    
-    float limit_time;//　制限時間
-    int minite;     //　制限時間（分）
-    float second;	//　制限時間（秒）
-    int oldSecond;//　前回Update時の秒数
-    bool timerFlag = false;//　タイマーフラグ
 
+    private float limitTime;//　制限時間
+    private int minite = 3;     //　制限時間（分）
+    private float second = 2.0f;	//　制限時間（秒）
+    private int oldSecond = 0;//　前回Update時の秒数
+    private bool timerFlag = false;//　タイマーフラグ
 
-    // Use this for initialization
     void Start()
     {
-        
-        minite = 3;
-        second = 2.0f;
-        limit_time = minite * 60 + second;
-        oldSecond = 0;
+
+        limitTime = minite * 60 + second;
+
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown("space"))
+        if (Input.GetKeyDown("space"))
         {
             timerFlag = true;
         }
-        
-        if(timerFlag == true)
+
+        if (timerFlag)
         {
-            if (Time.timeScale > 0 && limit_time > 0.0f)
+            if (Time.timeScale > 0 && limitTime > 0.0f)
             {
                 //　一旦トータルの制限時間を計測
-                limit_time = minite * 60 + second;
-                limit_time -= Time.deltaTime;
+                limitTime = minite * 60 + second;
+                limitTime -= Time.deltaTime;
 
                 //　再設定
-                minite = ((int)(limit_time)) / 60;
-                second = limit_time - minite * 60;
+                minite = ((int)(limitTime)) / 60;
+                second = limitTime - minite * 60;
 
                 //時間を表示する
                 if ((int)(second) != oldSecond)
@@ -51,17 +46,13 @@ public class GameTime : MonoBehaviour
                 }
                 oldSecond = ((int)(second));
 
-                if (limit_time <= 0.0f)
+                //時間が0になったら
+                if (limitTime <= 0.0f)
                 {
                     Debug.Log("制限時間終了");
                 }
 
             }
         }
-       
-
-    
     }
-
-   
 }

@@ -1,52 +1,15 @@
 fileFormatVersion: 2
-guid: ce2cc283e1bc7445ba8a439c3a79662b
-timeCreated: 1476707976
+guid: bbb2c20507afa4075883561256bb5669
+timeCreated: 1477649395
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
     100000: //RootNode
-    100002: parts1
-    100004: parts2
-    100006: parts3
-    100008: parts4
-    100010: parts5
-    100012: parts6
-    100014: parts7
-    100016: parts8
     400000: //RootNode
-    400002: parts1
-    400004: parts2
-    400006: parts3
-    400008: parts4
-    400010: parts5
-    400012: parts6
-    400014: parts7
-    400016: parts8
-    2300000: parts1
-    2300002: parts2
-    2300004: parts3
-    2300006: parts4
-    2300008: parts5
-    2300010: parts6
-    2300012: parts7
-    2300014: parts8
-    3300000: parts1
-    3300002: parts2
-    3300004: parts3
-    3300006: parts4
-    3300008: parts5
-    3300010: parts6
-    3300012: parts7
-    3300014: parts8
-    4300000: parts1
-    4300002: parts2
-    4300004: parts3
-    4300006: parts4
-    4300008: parts5
-    4300010: parts6
-    4300012: parts7
-    4300014: parts8
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: Box001
   materials:
     importMaterials: 1
     materialName: 0

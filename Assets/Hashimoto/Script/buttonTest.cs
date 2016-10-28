@@ -7,7 +7,7 @@ public class buttonTest : MonoBehaviour
   public void ButtonPush()
   {
     //押された時の処理
-    Debug.Log("押されました。");
+    //Debug.Log("押されました。");
     //GetComponent<Button>().Select();
   }
 }

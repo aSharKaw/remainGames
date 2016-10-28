@@ -1,52 +1,29 @@
 fileFormatVersion: 2
-guid: c685650c5e8ec4234b860df6b066f92f
-timeCreated: 1477649395
+guid: 9015fd98a805e684e8d95c6ba662f991
+timeCreated: 1477674479
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
-    100000: //RootNode
-    100002: parts1
-    100004: parts2
-    100006: parts3
-    100008: parts4
-    100010: parts5
-    100012: parts6
-    100014: parts7
-    100016: parts8
-    400000: //RootNode
-    400002: parts1
-    400004: parts2
-    400006: parts3
-    400008: parts4
-    400010: parts5
-    400012: parts6
-    400014: parts7
-    400016: parts8
-    2300000: parts1
-    2300002: parts2
-    2300004: parts3
-    2300006: parts4
-    2300008: parts5
-    2300010: parts6
-    2300012: parts7
-    2300014: parts8
-    3300000: parts1
-    3300002: parts2
-    3300004: parts3
-    3300006: parts4
-    3300008: parts5
-    3300010: parts6
-    3300012: parts7
-    3300014: parts8
-    4300000: parts1
-    4300002: parts2
-    4300004: parts3
-    4300006: parts4
-    4300008: parts5
-    4300010: parts6
-    4300012: parts7
-    4300014: parts8
+    100000: Sphere
+    100002: Torus
+    100004: //RootNode
+    100006: Tower
+    400000: Sphere
+    400002: Torus
+    400004: //RootNode
+    400006: Tower
+    2300000: Sphere
+    2300002: Torus
+    2300004: Tower
+    3300000: Sphere
+    3300002: Torus
+    3300004: Tower
+    4300000: Tower
+    4300002: Torus
+    4300004: Sphere
+    7400000: Take 001
+    9500000: //RootNode
   materials:
     importMaterials: 1
     materialName: 0
@@ -67,7 +44,43 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 100
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Sphere
+        weight: 1
+      - path: Torus
+        weight: 1
+      - path: Tower
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
     isReadable: 1
   meshes:
     lODScreenPercentages: []
@@ -105,7 +118,7 @@ ModelImporter:
     rootMotionBoneName: 
     hasTranslationDoF: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

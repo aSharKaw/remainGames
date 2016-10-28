@@ -1,21 +1,18 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class DestryTime : MonoBehaviour
+public class destryTime : MonoBehaviour
 {
-    [SerializeField]
-    private float time_D;
+  [SerializeField]
+  private float time;
 
+  void Start()
+  {
+    Destroy(gameObject, time);
+  }
 
-    // Use this for initialization
-    void Start()
-    {
-        Destroy(this.gameObject, time_D);
-    }
+  void Update()
+  {
+  }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 }

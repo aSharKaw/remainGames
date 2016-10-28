@@ -14,6 +14,9 @@ public class titleBuilding : MonoBehaviour {
     //ビルの耐久度(とりあえず)
     [SerializeField]
     private int durability;
+    [SerializeField]
+    private GameObject title;
+
 
     void Start()
     {
@@ -29,14 +32,13 @@ public class titleBuilding : MonoBehaviour {
         building.transform.eulerAngles = new Vector3(-90, 0, 0);
 
         if (building.transform.position.y >= 0)
-        {     
+        {
             durability--;
         }
         else
         {
             building.transform.Translate(transform.up * -0.1f);
         }
-       
 
         //耐久度が0なら差し替え
         if (durability <= 0)

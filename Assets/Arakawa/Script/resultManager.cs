@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class resultManager : MonoBehaviour
 {
@@ -13,11 +14,12 @@ public class resultManager : MonoBehaviour
     [SerializeField]
     private UnityEngine.UI.Text nameText;
 
-    private string playerName = "hoge";
+    private string playerName = "";
 
     void OnGUI()
     {
-        playerName = GUI.TextField(new Rect(position, size), playerName, 5);
+        //playerName = GUI.TextField(new Rect(position, size), playerName, 5);
+        //GUI.TextField(new Rect(10, 10, 100, 100), "TextField");
     }
 
     // Use this for initialization
@@ -36,6 +38,11 @@ public class resultManager : MonoBehaviour
             nameText.text = playerName;
         }
         //#endif
+
+        if(Input.GetKeyDown(KeyCode.O))
+        {
+            SceneManager.LoadScene("title");
+        }
     }
 
     public void NameSave()

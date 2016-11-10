@@ -24,7 +24,7 @@ public class titleManager : MonoBehaviour {
         buildingPosition = new Vector3(Random.Range(-15, 15), -3, Random.Range(-10, 10));
 
         transition = false;
-        transitionTime = 30 * 60;
+        transitionTime = 0 * 60;
     }
 
     //シーン遷移
@@ -39,7 +39,7 @@ public class titleManager : MonoBehaviour {
             if (_count == transitionTime)
             {
                 _transition = false;
-                //SceneManager.LoadScene("タイトル！！！！");
+                SceneManager.LoadScene("main");
             }
             else
             { _count++; }
@@ -60,6 +60,7 @@ public class titleManager : MonoBehaviour {
 #if UNITY_EDITOR
         if (Input.GetMouseButtonDown(0))
         {
+            transition = true;
             Transition(transition);
             Debug.Log("Title Taped");
         }

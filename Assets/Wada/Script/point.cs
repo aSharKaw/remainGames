@@ -5,27 +5,41 @@ using System.Collections.Generic;
 
 public class point : MonoBehaviour
 {
-
     [SerializeField]
-    private static int getScore;
+    private Text pointText;
 
+    private float alpha = 1.0f;
 
-    // Use this for initialization
     void Start()
     {
-        getScore = 0;
-
-
+        pointText = pointText.GetComponent<Text>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("space"))
+          //ポイントが入ったら
+        if (score.push)
         {
-           GetComponent<Text>().text = "+" + score.getScore;
+            alpha -= 0.1f;
+           
+            pointText.color = new Color(1, 0.5f, 0, alpha);
+            pointText.text = "+" + score.getScore;
 
+            if(alpha <= 0.0f)
+            {
+                alpha = 0.0f;
+            }
+        }
+        
+        if(alpha == 0.0f)
+        {
+            alpha = 1.0f;
         }
 
+        //ポイントが入っていないとき
+        if(!score.push)
+        {
+            pointText.color = new Color(0, 1, 0, alpha * 0);
+        }
     }
 }
